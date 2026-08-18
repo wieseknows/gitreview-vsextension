@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<Nullable>enable</Nullable>
+		<LangVersion>14</LangVersion>
+		<UseWPF>true</UseWPF>
+		<VSSDKBuildToolsAutoSetup>true</VSSDKBuildToolsAutoSetup>
+		<GeneratePkgDefFile>true</GeneratePkgDefFile>
+		<VsixDeployOnDebug>true</VsixDeployOnDebug>
+		<IncludeDebugSymbolsInLocalVSIXDeployment>true</IncludeDebugSymbolsInLocalVSIXDeployment>
+
+		<StartAction>Program</StartAction>
+		<StartProgram>$(DevEnvDir)devenv.exe</StartProgram>
+		<StartArguments>/rootsuffix Exp</StartArguments>
+	</PropertyGroup>
+	
+	<ItemGroup>
+	  <Content Include="Assets\icon.png" />
+	  <Content Include="Assets\example-screenshot.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectCapability Include="CreateVsixContainer" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<VSCTCompile Include="VSCommandTable.vsct">
+			<ResourceName>Menus.ctmenu</ResourceName>
+		</VSCTCompile>
+
+		<Page Update="ToolWindows\GitReviewToolWindowControl.xaml">
+			<Generator>MSBuild:Compile</Generator>
+			<SubType>Designer</SubType>
+		</Page>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="System.Design" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.14.40265" ExcludeAssets="runtime" />
+		<PackageReference Include="Microsoft.VSSDK.BuildTools" Version="18.5.40034" />
+		<PackageReference Include="wieseknows.GitReview.Shared" Version="1.0.8" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
+		<AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">
+			<_Parameter1>SolutionDir</_Parameter1>
+			<_Parameter2>$([System.IO.Path]::GetFullPath('$(MSBuildProjectDirectory)\..\'))</_Parameter2>
+		</AssemblyAttribute>
+	</ItemGroup>
+
+</Project>

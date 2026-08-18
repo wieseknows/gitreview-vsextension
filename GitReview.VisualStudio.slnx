@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="GitReview.VisualStudio/GitReview.VisualStudio.csproj">
+    <Deploy />
+  </Project>
+</Solution>

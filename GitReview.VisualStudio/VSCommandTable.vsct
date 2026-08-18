@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable">
+
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidGitReviewPackage">
+
+    <Groups>
+      <Group
+          guid="guidGitReviewCommandSet"
+          id="GitReviewGroup"
+          priority="0x0600">
+        <Parent
+            guid="guidSHLMainMenu"
+            id="IDM_VS_MENU_TOOLS"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button
+          guid="guidGitReviewCommandSet"
+          id="cmdidOpenGitReview"
+          priority="0x0100"
+          type="Button">
+        <Parent
+            guid="guidGitReviewCommandSet"
+            id="GitReviewGroup"/>
+        <Strings>
+          <ButtonText>GitReview</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+  </Commands>
+
+  <Symbols>
+
+    <GuidSymbol
+        name="guidGitReviewPackage"
+        value="{d3b07384-d11e-49fb-bc3f-fb112b329437}" />
+
+    <GuidSymbol
+        name="guidGitReviewCommandSet"
+        value="{f5b8e4a1-2c67-4d91-8e53-61a7c9b20f44}">
+
+      <IDSymbol
+          name="GitReviewGroup"
+          value="0x1020" />
+
+      <IDSymbol
+          name="cmdidOpenGitReview"
+          value="0x0100" />
+
+    </GuidSymbol>
+
+  </Symbols>
+
+</CommandTable>
