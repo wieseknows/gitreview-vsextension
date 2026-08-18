@@ -2,6 +2,10 @@
 
 GitReview brings AI-powered code reviews directly into Visual Studio. Analyze your Git diffs before committing or creating pull requests using top LLM providers, including OpenRouter, Google Gemini, and DeepSeek.
 
+<p align="center">
+  <img src="./Assets/example-screenshot.png" alt="GitReview Tool Window in Visual Studio" />
+</p>
+
 ## Features
 
 * Instant AI Code Reviews: Get inline feedback, bug detection, and optimization suggestions right inside Visual Studio.
