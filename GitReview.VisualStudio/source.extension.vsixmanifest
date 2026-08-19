@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="GitReview.VisualStudio.fe75bee5-7709-4b73-898d-d68117743c4a" Version="1.0" Language="en-US" Publisher="wieseknows" />
+    <Identity Id="GitReview.VisualStudio.6699a1c9-71de-44d5-b7d8-d12c24bf438b" Version="1.0" Language="en-US" Publisher="wieseknows" />
     <DisplayName>GitReview</DisplayName>
     <Description>AI-powered code review for Visual Studio.</Description>
     <Icon>./Assets/icon.png</Icon>
